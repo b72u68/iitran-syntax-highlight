@@ -1,0 +1,80 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "IITRAN",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#types"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comments"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.iitran",
+          "match": "\\b(IF|ELSE|WHILE|DO|END|STOP)\\b"
+        },
+        {
+          "name": "keyword.operator.iitran",
+          "match": "\\b(AND|OR|CHAR|LG|INT)\\b"
+        },
+        {
+          "name": "keyword.operator.iitran",
+          "match": "(\\+|\\-|\\*|/|<|<=|>|>=|#|=|~|<\\-)"
+        }
+      ]
+    },
+    "constants": {
+      "patterns": [
+        {
+          "name": "constant.character.iitran",
+          "match": "\\'[a-zA-Z]\\'"
+        },
+        {
+          "name": "constant.numeric.iitran",
+          "match": "\\b(\\-?\\d+)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "entity.name.type.iitran",
+          "match": "\\b(INTEGER|CHARACTER|LOGICAL)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.iitran",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.iitran",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.dollar-sign.comdb2",
+          "begin": "\\$",
+          "end": "\\n"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.iit"
+}

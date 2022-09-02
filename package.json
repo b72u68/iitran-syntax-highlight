@@ -1,0 +1,35 @@
+{
+  "name": "iitran-syntax-highlight",
+  "displayName": "IITRAN Syntax Highlight",
+  "description": "Provide syntax highlighting support for IITRAN, a strong-typed subset of FORTRAN",
+  "icon": "images/iitran.jpg",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "iitran",
+        "aliases": [
+          "IITRAN",
+          "iitran"
+        ],
+        "extensions": [
+          ".iit"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "iitran",
+        "scopeName": "source.iit",
+        "path": "./syntaxes/iitran.tmLanguage.json"
+      }
+    ]
+  }
+}
